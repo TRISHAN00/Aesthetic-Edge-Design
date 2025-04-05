@@ -10,8 +10,6 @@ import Home from "./pages/Home";
 import Interior from "./pages/Interior";
 import Landscape from "./pages/Landscape";
 
-
-
 function App() {
   return (
     <Router>
