@@ -218,6 +218,9 @@ const HeaderStyled = styled.header`
       height: auto;
       padding: 15px 0;
       background-color: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: start;
     }
 
     ul {
@@ -236,6 +239,7 @@ const HeaderStyled = styled.header`
         a {
           color: #fff;
           text-decoration: none;
+          text-align: left;
           font-size: 18px;
           font-weight: 500;
           padding: 10px;
@@ -256,6 +260,7 @@ const HeaderStyled = styled.header`
       flex-direction: column;
       align-items: center;
       margin-top: 20px;
+      align-items: start;
 
       ul {
         display: flex;
@@ -283,6 +288,8 @@ const HeaderStyled = styled.header`
         border-radius: 20px;
         text-decoration: none;
         margin-top: 10px;
+        margin-left: 10px;
+    
 
         &:hover {
           background-color: #f0c040;
