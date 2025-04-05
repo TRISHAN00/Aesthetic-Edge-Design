@@ -19,6 +19,7 @@ export default function Banner() {
 }
 
 const BannerStyled = styled.header`
+overflow: hidden;
   &.banner-area {
     position: relative;
     background-image: ${({ bg }) => `url(${bg})`};
