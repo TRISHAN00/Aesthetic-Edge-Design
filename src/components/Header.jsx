@@ -8,6 +8,7 @@ import {
   FaTimes,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo/logo.svg";
 
@@ -67,14 +68,14 @@ export default function Header() {
             </div>
           </Col>
           <Col xs={8} md={4} className="logo">
-            <a href="#">
+            <Link to={'/'}>
               <img
                 width={300}
                 src={logo}
                 alt="Logo"
                 className="animated-logo"
               />
-            </a>
+            </Link>
           </Col>
           <Col xs={2} md={4} className="contact">
             <a href="tel:01629803900" className="phone-link">
@@ -92,60 +93,55 @@ export default function Header() {
           >
             <ul>
               <li>
-                <a href="#" onClick={() => setIsOpen(false)}>
+                <Link to={'/'}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" onClick={() => setIsOpen(false)}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" onClick={() => setIsOpen(false)}>
+                <Link to={'/interior'} onClick={() => setIsOpen(false)}>
                   Interior
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" onClick={() => setIsOpen(false)}>
+                <Link to={'/exterior'} onClick={() => setIsOpen(false)}>
                   Exterior
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" onClick={() => setIsOpen(false)}>
+                <Link to={'/landscape'} onClick={() => setIsOpen(false)}>
                   Landscape
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" onClick={() => setIsOpen(false)}>
+                <Link to={'/animation'} onClick={() => setIsOpen(false)}>
                   Animation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" onClick={() => setIsOpen(false)}>
+                <Link to={'/contact'}>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="mobile-social">
               <ul>
                 <li>
-                  <a href="#">
+                  <a target="_blank" href="#">
                     <FaFacebookF />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a target="_blank" href="#">
                     <FaLinkedinIn />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a target="_blank" href="#">
                     <FaYoutube />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a target="_blank" href="#">
                     <FaInstagram />
                   </a>
                 </li>
@@ -244,6 +240,7 @@ const HeaderStyled = styled.header`
           font-weight: 500;
           padding: 10px;
           display: block;
+          cursor: pointer;
           transition: color 0.3s ease, background-color 0.3s ease;
 
           &:hover {

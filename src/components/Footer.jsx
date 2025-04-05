@@ -212,6 +212,7 @@ const FooterStyled = styled.footer`
 
     .copyright {
       color: #888;
+      text-align: center;
     }
   }
 

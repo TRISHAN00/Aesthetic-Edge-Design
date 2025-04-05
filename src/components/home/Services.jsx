@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 // Note: You'll need actual images in your project
@@ -12,7 +13,7 @@ const serviceData = [
       "Transform your indoor spaces with our premium interior design solutions",
     image:
       "https://img.freepik.com/free-photo/interior-design-with-armchair-potted-plant_23-2149427983.jpg?t=st=1743854199~exp=1743857799~hmac=d0d7a5683331c71009a0872b80b5ceae7b76d8d43385e719520f045e48659ba0&w=740",
-    link: "/services/interior",
+    link: "/interior",
   },
   {
     id: 2,
@@ -20,7 +21,7 @@ const serviceData = [
     description: "Create lasting impressions with stunning exterior aesthetics",
     image:
       "https://img.freepik.com/free-vector/big-office-building_1308-83082.jpg?t=st=1743854430~exp=1743858030~hmac=e52b84fc4c9d8b2fcea59ed059f36bb2da0e9f295237fd0fdbd10d508087f4c8&w=740", // Replace with actual path
-    link: "/services/exterior",
+    link: "/exterior",
   },
   {
     id: 3,
@@ -29,7 +30,7 @@ const serviceData = [
       "Breathtaking outdoor spaces that blend nature with architecture",
     image:
       "https://img.freepik.com/free-photo/ai-generated-modern-styled-entryway_23-2150692331.jpg?t=st=1743854482~exp=1743858082~hmac=e413e8ec4b8dfe5ec11bcf447b9cf17af094942a62d6fb190a1c8d6ad791be95&w=740", // Replace with actual path
-    link: "/services/landscape",
+    link: "/landscape",
   },
   {
     id: 4,
@@ -38,7 +39,7 @@ const serviceData = [
       "Bring your vision to life with cutting-edge 3D and 2D animations",
     image:
       "https://img.freepik.com/free-psd/3d-rendering-room-night_23-2150838221.jpg?t=st=1743854532~exp=1743858132~hmac=f1252cc550eb9741a1bf21fb29961e1accb73ce60d5a820d2831112ad83e0a37&w=826", // Replace with actual path
-    link: "/services/animation",
+    link: "/animation",
   },
 ];
 
@@ -54,22 +55,24 @@ const ServiceCards = () => {
         <Row>
           {serviceData.map((service) => (
             <Col key={service.id} xs={12} sm={6} lg={3} className="mb-4">
-              <ServiceCard bgImage={service.image}>
-                <CardOverlay>
-                  <CardContent>
-                    <img
-                      className="mb-4 icon "
-                      height={100}
-                      width={100}
-                      src="/public/fav.svg"
-                      alt=""
-                    />
-                    <CardTitle>{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                    <CardButton>Learn More</CardButton>
-                  </CardContent>
-                </CardOverlay>
-              </ServiceCard>
+              <Link to={service.link} >
+                <ServiceCard bgImage={service.image}>
+                  <CardOverlay>
+                    <CardContent>
+                      <img
+                        className="mb-4 icon "
+                        height={100}
+                        width={100}
+                        src="/public/fav.svg"
+                        alt=""
+                      />
+                      <CardTitle>{service.title}</CardTitle>
+                      <CardDescription>{service.description}</CardDescription>
+                      <CardButton>Learn More</CardButton>
+                    </CardContent>
+                  </CardOverlay>
+                </ServiceCard>
+              </Link>
             </Col>
           ))}
         </Row>
@@ -89,7 +92,6 @@ const SectionTitle = styled.h2`
   font-size: 36px;
   font-weight: 700;
   color: #333;
-  
 `;
 
 const SectionSubtitle = styled.p`
