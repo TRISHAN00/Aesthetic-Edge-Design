@@ -1,13 +1,12 @@
-import { Button } from 'react-bootstrap';
 import './App.css';
+import Header from './components/Header';
 
 
 function App() {
 
   return (
     <>
-      Hello
-      <Button>Hello</Button>
+      <Header/>
     </>
   )
 }
