@@ -43,7 +43,7 @@ const serviceData = [
   },
 ];
 
-const ServiceCards = () => {
+const Services = () => {
   return (
     <ServiceSection>
       <Container>
@@ -252,4 +252,4 @@ const CardButton = styled.button`
   }
 `;
 
-export default ServiceCards;
+export default Services;
